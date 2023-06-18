@@ -1,0 +1,8 @@
+{
+    "token": "",
+    "group": "",
+    "channel": "",
+    "abbreviate": false,
+    "format": "Members: {data}",
+    "interval": 300
+}
