@@ -15,7 +15,7 @@ setInterval(async () => {
     const fetched = await fetch(`https://groups.roblox.com/v1/groups/${config.group}`);
 
     if (fetched.status !== 200) {
-        return console.log(`${fetched.status}: ${fetched.statusText}`);
+        throw new Error(`${fetched.status}: ${fetched.statusText}`);
     }
 
     const data = await fetched.json();
@@ -36,5 +36,5 @@ setInterval(async () => {
         headers: {
             'Content-Type': 'application/json'
         }
-    }).catch(error => console.error(error));
+    }).catch(error => console.error);
 }, config.interval * 1000);
