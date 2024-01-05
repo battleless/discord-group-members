@@ -36,5 +36,5 @@ setInterval(async () => {
         headers: {
             'Content-Type': 'application/json'
         }
-    }).catch(error => console.error);
+    }).catch(console.error);
 }, config.interval * 1000);
